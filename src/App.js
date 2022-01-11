@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { MovieList, SearchBox, MovieListHeading } from './components';
+import {
+  MovieList,
+  SearchBox,
+  MovieListHeading,
+  AddFavourite,
+} from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 export default function App() {
@@ -30,7 +35,7 @@ export default function App() {
       </div>
 
       <div className="row">
-        <MovieList movies={movies} />
+        <MovieList movies={movies} favouriteComponent={AddFavourite} />
       </div>
     </div>
   );
